@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialty Shop Special Offer</title>
+    <style>
+        /* Add your CSS styles here */
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Special Offer Questions</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <input type="radio" id="yes" name="answer" value="yes"> Yes
+            <input type="radio" id="no" name="answer" value="no"> No
+        </div>
+        <button id="next" onclick="nextQuestion()">Next</button>
+        <button id="skip" onclick="skipQuestion()">Skip</button>
+        <div id="result" style="display: none;">
+            <p id="qualification"></p>
+            <p id="offer"></p>
+            <p id="time-spent"></p>
+        </div>
+    </div>
+
+    <script>
+        // Define your questions and corresponding offers
+        const questions = [
+            { question: "Are you a student?", offer: "Because you're a student, you qualify for 10% off your purchase!" },
+            { question: "Are you a low-income person?", offer: "Because you're a low-income person, you qualify for $100 off your purchase!" },
+            // Add more questions and offers here
+        ];
+
+        let currentQuestionIndex = 0;
+        const startTime = new Date().getTime();
+        
+        const questionContainer = document.getElementById("question-container");
+        const questionElement = document.getElementById("question");
+        const yesButton = document.getElementById("yes");
+        const noButton = document.getElementById("no");
+        const nextButton = document.getElementById("next");
+        const skipButton = document.getElementById("skip");
+        const resultContainer = document.getElementById("result");
+        const qualificationElement = document.getElementById("qualification");
+        const offerElement = document.getElementById("offer");
+        const timeSpentElement = document.getElementById("time-spent");
+
+        function nextQuestion() {
+            const userAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (currentQuestionIndex < questions.length) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    displayQuestion(currentQuestionIndex);
+                } else {
+                    showResult();
+                }
+            }
+        }
+
+        function skipQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    displayQuestion(currentQuestionIndex);
+                } else {
+                    showResult();
+                }
+            }
+        }
+
+        function displayQuestion(index) {
+            questionElement.innerText = questions[index].question;
+            resultContainer.style.display = "none";
+        }
+
+        function showResult() {
+            const totalTime = (new Date().getTime() - startTime) / 1000;
+            const userQualifications = [];
+            let totalOffer = 0;
+
+            questions.forEach((question, index) => {
+                if (index < currentQuestionIndex && document.querySelector(`input[name="answer"][value="yes"]:checked`)) {
+                    userQualifications.push(question.offer);
+                    // Add logic here to calculate total offer amount based on the user's answers
+                }
+            });
+
+            qualificationElement.innerText = "Qualifications: " + userQualifications.join(", ");
+            offerElement.innerText = "Total Offer: $" + totalOffer;
+            timeSpentElement.innerText = "Time Spent: " + totalTime + " seconds";
+            resultContainer.style.display = "block";
+            questionContainer.style.display = "none";
+        }
+
+        displayQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

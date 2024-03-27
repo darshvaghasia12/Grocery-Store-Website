@@ -1,0 +1,91 @@
+<html>
+    <head>
+    <title>Deals</title>
+    <link rel="stylesheet" href="astyle Deals.css">
+    <link rel="icon" href="Untitled.png" type="image/icon type">
+    </head>
+    <body>
+        <header>
+            <section class='overlay'>
+                <br><br><br><br>
+                <div class = 'GM'>
+                    <h1>GREEN MART</h1>
+                    <h2>Deals</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Fresh Products.html">Fresh Products</a></li>
+                        <li><a href="Frozen.html">Frozen</a></li>
+                        <li><a href="pantry.html">Pantry</a></li>
+                        <li><a href="BreakfastCereal.html">Breakfast and Cereal</a></li>
+                        <li><a href="Baking.html">Baking</a></li>
+                        <li><a href="Snacks.html">Snacks</a></li>
+                        <li><a href="Candy.html">Candy</a></li>
+                        <li><a href="Specialty.html">Specialty Shops</a></li>
+                        <li><a href="Deals.html">Deals</a></li>
+                        <li><a href="My-account.html">My-Account</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <!-- Add links for other pages here -->
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <div class="row">
+            <div class="side">
+               <!--- Testimonials-->
+                <div class="div3 eachdiv">
+                    <p> Testimonial </p>
+                    <div class="userdetails">
+                      <div class="imgbox">
+                        <img src="Darsh.png" alt="">
+                      </div>
+                      <div class="detbox">
+                        <p class="name dark">Darsh Vaghasia</p>
+                        <p class="designation dark">Verified Customer</p>
+                      </div>
+                    </div>
+                    <div class="review dark">
+                      <h4>Such a life-changing experience. Highly recommended!</h4>
+                      <p>One stop shop for all Indian groceries. Clean store, excellent service! Always fresh produce!</p>
+                    </div>
+                  </div>
+                  <!---END-->
+            </div>
+            <div class="right-side">
+                <!-- Content for Fresh Products -->
+                <em class="div4"><h1 style="color:seagreen;text-align: center;font-family: 'Dancing Script', cursive;"> Deals  </h1></em>
+                <div class="div4 eachdiv">
+                   <!-- <div class="eachdiv"> -->
+                   <img src="Supermarket Big Sale Template - Made with PosterMyWall.jpg" style="margin-left:12em;   ">
+                   <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>&copy; 2023 Grocery Store. All rights reserved.</p>
+            <p>Darsh Maheshkumar Vaghasia ( DXV210035 ) - CS6314-001</p>
+            <span id="datetime"></span>
+            <br>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+        </footer>
+        <script>
+            // create a function to update the date and time
+            function updateDateTime() {
+              // create a new `Date` object
+              const now = new Date();
+      
+              // get the current date and time as a string
+              const currentDateTime = now.toLocaleString();
+      
+              // update the `textContent` property of the `span` element with the `id` of `datetime`
+              document.querySelector('#datetime').textContent = currentDateTime;
+            }
+      
+            // call the `updateDateTime` function every second
+            setInterval(updateDateTime, 1000);
+          </script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <title>My Account</title>
+    <link rel="stylesheet" href="astyle myaccount.css">
+    <link rel="icon" href="Untitled.png" type="image/icon type">
+</head>
+
+<body>
+    <header>
+        <section class='overlay'>
+            <br><br><br><br>
+            <div class='GM'>
+                <h1>GREEN MART</h1>
+                <h2>My Account</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Fresh Products.html">Fresh Products</a></li>
+                    <li><a href="Frozen.html">Frozen</a></li>
+                    <li><a href="pantry.html">Pantry</a></li>
+                    <li><a href="BreakfastCereal.html">Breakfast and Cereal</a></li>
+                    <li><a href="Baking.html">Baking</a></li>
+                    <li><a href="Snacks.html">Snacks</a></li>
+                    <li><a href="Candy.html">Candy</a></li>
+                    <li><a href="Specialty.html">Specialty Shops</a></li>
+                    <li><a href="Deals.html">Deals</a></li>
+                    <li><a href="My-account.html">My-Account</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    <!-- Add links for other pages here -->
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="row">
+        <div class="side">
+            <!--- Testimonials-->
+            <div class="div3 eachdiv">
+                <p> Hi, Darsh </p>
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="Darsh.png" alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name dark">Darsh Vaghasia</p>
+                        <p class="designation dark">Verified Customer</p>
+                    </div>
+                </div>
+                <br>
+                <table style="margin-left: 1em;">
+                    <tr>
+                        <th>Manage Account</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Purchase History</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Personal Info</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Addresses</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Wallet</em></a></td>
+                    </tr>
+                </table>
+                <br>
+                <table style="margin-left: 1em;">
+                    <tr>
+                        <th>My Items</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Reorder</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Lists</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Registries</em></a></td>
+                    </tr>
+                </table>
+                <br>
+                <table style="margin-left: 1em;">
+                    <tr>
+                        <th>Privacy & Policies </th>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Privacy Choices</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Information</em></a></td>
+                    </tr>
+                </table>
+                <br>
+                <table style="margin-left: 1em;">
+                    <tr>
+                        <th>Customer Service</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Help</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><em>Terms of Use</em></a></td>
+                    </tr>
+                </table>
+                <!-- <div class="review dark">
+                      <h4>Such a life-changing experience. Highly recommended!</h4>
+                      <p>One stop shop for all Indian groceries. Clean store, excellent service! Always fresh produce!</p>
+                    </div> -->
+            </div>
+            <!---END-->
+        </div>
+        <div class="right-side">
+            <!-- Content for Fresh Products -->
+            <em class="div4">
+                <h1 style="color:seagreen;text-align: center;font-family: 'Dancing Script', cursive;"> Welcome to your
+                    Account</h1>
+            </em>
+            <div class="div4 eachdiv">
+                <div class="eachdiv">
+                    <h2 style="color:black; font-family: 'Roboto Flex', sans-serif;"> Account Info</h2>
+                    <p class="Addressp">Addresses, contact Information and password</p>
+                    <br>
+                    <div class="details">
+                        <div class="detail">
+                            <h3>Email</h3>
+                            <p>darshvaghasia@icloud.com</p>
+                        </div>
+                        <div class="detail">
+                            <h3>Phone No.</h3>
+                            <p>+1-224-770-7325</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eachdiv">
+                    <h2 style="color:black; font-family: 'Roboto Flex', sans-serif;"> Address</h2>
+                    <br>
+                    <div class="details">
+                        <div class="detail">
+                            <h3>Address</h3>
+                            <p>7575 Frankford Rd Apt 0326, Dallas Tx 75252</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="opacity: 0.4; text-align: center;">
+            ----------------------------------------------------------------------------------------------------------------------------------------
+        </p>
+        <br>
+        <p>&copy; 2023 Grocery Store. All rights reserved.</p>
+        <p>Darsh Maheshkumar Vaghasia ( DXV210035 ) - CS6314-001</p>
+        <span id="datetime"></span>
+        <br>
+        <p style="opacity: 0.4; text-align: center;">
+            ----------------------------------------------------------------------------------------------------------------------------------------
+        </p>
+    </footer>
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+          // create a new `Date` object
+          const now = new Date();
+  
+          // get the current date and time as a string
+          const currentDateTime = now.toLocaleString();
+  
+          // update the `textContent` property of the `span` element with the `id` of `datetime`
+          document.querySelector('#datetime').textContent = currentDateTime;
+        }
+  
+        // call the `updateDateTime` function every second
+        setInterval(updateDateTime, 1000);
+      </script>
+</body>
+
+</html>

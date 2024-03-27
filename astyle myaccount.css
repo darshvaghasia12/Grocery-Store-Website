@@ -1,0 +1,307 @@
+
+p, h3{margin:0
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the navigation bar */
+header {
+    /* height: 600px;
+    width: 98vw;
+    overflow: hidden; */
+    /* background: black; */
+    background: url("pexels-matheus-cenali-2733918.jpg");
+    background-position:center center;
+    position: relative;
+    background-size: cover;
+    /* padding-bottom:5em; */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+.GM h1{
+    color:azure;
+    position: relative;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 4em;
+}
+
+.GM h2{
+    color:azure;
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2em;
+}
+
+/* .header{
+    opacity: 0.9;
+    height: 40%;
+    background: black;
+    overflow: hidden;
+} */
+
+.headerp{
+    color: white;
+}
+
+/* .header h1{
+    text-align: center;
+    padding: 50px;
+    color:ghostwhite;
+    font-family: 'Montserrat', sans-serif;
+} */
+
+
+nav ul {
+    /* list-style-type: none; */
+    text-align: center;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    opacity: 0.7;;
+}
+
+/* Apply styles to the page content */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+    font-style: italic;
+}
+/* Testimonials Start */
+.eachdiv
+{
+	padding: 1rem 1rem;
+    border-radius: 0.8rem;
+    -webkit-box-shadow: 5px 5px 20px #6d6b6b6b;
+            box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: black;
+    margin-top: 1rem;
+    margin-left: 1em;
+}
+.div3
+{
+	background: white;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    color: black;
+}
+
+.div4
+{
+	background: white;
+    /* grid-column: 1/2;
+    grid-row: 1/3; */
+    color: black;
+    float:inline-start;
+    margin-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Product {
+    width: 150px;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+table a {
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
+
+table a:hover{
+    opacity: 0.7;
+}
+
+.imgbox
+{
+	margin-right: 1rem;
+}
+.imgbox img
+{
+	border-radius: 50%;
+	width: 2rem;
+	border: 2px solid #cec5c5;
+}
+.detbox
+{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.detbox p
+{
+	margin: 0;
+}
+.detbox .name
+{
+	color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+	color: #49505A;
+}
+.detbox .designation
+{
+	color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+.detbox .designation.dark
+{
+	color: #49505A;
+}
+
+/* Testimonials End */
+
+/* Products*/
+.Product1{
+    float:left;
+}
+
+.Product2{
+    float: inline-start;
+    margin-left: 1em;
+}
+
+.productbox img{
+    height : 100%;
+    width: 100%;
+}
+
+.productbox {
+    width: 150px;
+    margin: auto;
+    object-fit: contain;
+}
+
+.price{
+    color: black;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.price p{
+    font-style: normal;
+    opacity: 50%;
+    font-weight: 100;
+}
+
+.price .weight{
+    font-style: normal;
+    opacity: 50%;
+    font-size: x-small;
+    font-weight: 200;
+}
+/* Product End */
+
+.side{
+    width:400px;
+}
+
+.row{
+    height: 100%;
+    padding-top: 1em;
+    display: flex;
+}
+.row .right-side{
+    height: 33%;
+    width: 100%;
+    width: 90%;
+    margin-right: 40px;
+
+}
+
+/* Styles for footer */
+footer {
+    /* background-color:#E8E8E8  ; */
+    color: #343434;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+/* .foot-left{
+    float: left;
+    margin-left: 15em;
+}
+.foot-center{
+    float:inline-start;
+    margin-left: 24em;
+}
+.foot-right{
+    float :inline-end;
+    margin-right: 15em;
+} */
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Addressp{
+    color: black;
+    opacity: 0.7;
+}
+
+.detail{
+    padding:10px;
+    margin:10px;
+}
+
+footer p{
+    text-align: center;
+}
+/* Add more styles using the specified CSS properties as needed */

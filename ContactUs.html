@@ -1,0 +1,199 @@
+<html>
+    <head>
+    <title>Contact US</title>
+    <link rel="stylesheet" href="astyle contactus.css">
+    <link rel="icon" href="Untitled.png" type="image/icon type">
+    </head>
+    <body>
+        <header>
+            <section class='overlay'>
+                <br><br><br><br>
+                <div class = 'GM'>
+                    <h1>GREEN MART</h1>
+                    <h2>Contact Us</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Fresh Products.html">Fresh Products</a></li>
+                        <li><a href="Frozen.html">Frozen</a></li>
+                        <li><a href="pantry.html">Pantry</a></li>
+                        <li><a href="BreakfastCereal.html">Breakfast and Cereal</a></li>
+                        <li><a href="Baking.html">Baking</a></li>
+                        <li><a href="Snacks.html">Snacks</a></li>
+                        <li><a href="Candy.html">Candy</a></li>
+                        <li><a href="Specialty.html">Specialty Shops</a></li>
+                        <li><a href="Deals.html">Deals</a></li>
+                        <li><a href="My-account.html">My-Account</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <!-- Add links for other pages here -->
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <div class="row">
+            <div class="side">
+               <!--- Testimonials-->
+                <div class="div3 eachdiv">
+                    <p> Testimonial </p>
+                    <div class="userdetails">
+                      <div class="imgbox">
+                        <img src="Darsh.png" alt="">
+                      </div>
+                      <div class="detbox">
+                        <p class="name dark">Darsh Vaghasia</p>
+                        <p class="designation dark">Verified Customer</p>
+                      </div>
+                    </div>
+                    <div class="review dark">
+                      <h4>Such a life-changing experience. Highly recommended!</h4>
+                      <p>One stop shop for all Indian groceries. Clean store, excellent service! Always fresh produce!</p>
+                    </div>
+                  </div>
+                  <!---END-->
+            </div>
+            <div class="right-side">
+                <!-- Content for Fresh Products -->
+                <div class="div4 eachdiv">
+                   <em><h1 style="color:seagreen;text-align: center;font-family: 'Dancing Script', cursive;"> Contact Us  </h1></em>
+
+                    <div class="container">
+                    <!-- <form id ="contactForm" onsubmit="validateForm()">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label><br>
+
+                        <label for="Email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+                        <input id="submit" type="submit" value="Submit">
+                    </form> -->
+                    <form id="contact-form" onsubmit="validateForm()">
+                      <div class="inputBox">
+                        <span>First Name</span>
+                          <input type="text" id="first-name" name="first-name">
+                      </div>
+                      <div class="inputBox">
+                          <span>Last Name</span>
+                          <input type="text" id="last-name" name="last-name">
+                          
+                      </div>
+                      <div class="inputBox">
+                          <span>Email</span>
+                          <input type="text" id="email" name="email">
+                          
+                      </div>
+                      <div class="inputBox">
+                          <span>Phone Number</span>
+                          <input type="text" id="phone-number" name="phone-number">
+                          
+                      </div>
+                      <div class="form-group">
+                          <label>Gender</label>
+                          <div class="radio-group">
+                              <label class="radio-label" for="contact-call">
+                                  <input type="radio" id="contact-call" name="gender" value="call">
+                                  Male
+                              </label>
+                              <label class="radio-label" for="contact-email">
+                                  <input type="radio" id="contact-email" name="gender" value="email">
+                                  Female
+                              </label>
+                          </div>
+                      </div>
+                      <div class="inputBox">
+                          <textarea id="comment" name="comment"></textarea>
+                          <span>Type Your Message.....</span>
+                      </div>
+                      <div class="inputBox">
+                          <input type="submit" name="submit" value="Send">
+                      </div>
+                  </form>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>&copy; 2023 Grocery Store. All rights reserved.</p>
+            <p>Darsh Maheshkumar Vaghasia ( DXV210035 ) - CS6314-001</p>
+            <span id="datetime"></span>
+            <br>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+        </footer>
+        <script>
+        function validateForm() {
+        var firstName = document.getElementById("first-name").value;
+        var lastName = document.getElementById("last-name").value;
+        var phoneNumber = document.getElementById("phone-number").value;
+        var email = document.getElementById("email").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var comment = document.getElementById("comment").value;
+
+        // Regular expressions for validation
+        var nameRegex = /^[A-Z][a-zA-Z]*$/;
+        var phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Check if the first name and last name are alphabetic and start with a capital letter
+        if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+            alert("First name and last name must be alphabetic and start with a capital letter.");
+            return false;
+        }
+
+        // Check if first name and last name are not the same
+        if (firstName.toLowerCase() === lastName.toLowerCase()) {
+            alert("First name and last name cannot be the same.");
+            return false;
+        }
+
+        // Check if phone number is in the correct format
+        if (!phoneRegex.test(phoneNumber)) {
+            alert("Phone number must be in the format (xxx) xxx-xxxx.");
+            return false;
+        }
+
+        // Check if email is valid
+        if (!emailRegex.test(email)) {
+            alert("Email address is not valid.");
+            return false;
+        }
+
+        // Check if gender is selected
+        if (!gender) {
+            alert("Please select a gender.");
+            return false;
+        }
+
+        // Check if comment is at least 10 characters long
+        if (comment.length < 10) {
+            alert("Comment must be at least 10 characters long.");
+            return false;
+        }
+
+        return true; // Form is valid
+    }
+
+    // Attach the validateForm function to the form's onsubmit event
+    document.getElementById("contact-form").onsubmit = function () {
+        return validateForm();
+    };
+          </script>
+    <script src="Date.js"></script>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+<html>
+    <head>
+    <title>Specialty</title>
+    <link rel="stylesheet" href="astyle specialty.css">
+    </head>
+    <body>
+        <header>
+            <section class='overlay'>
+                <br><br><br><br>
+                <div class = 'GM'>
+                    <h1>GREEN MART</h1>
+                    <h2>Specialty</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Fresh Products.html">Fresh Products</a></li>
+                        <li><a href="Frozen.html">Frozen</a></li>
+                        <li><a href="pantry.html">Pantry</a></li>
+                        <li><a href="BreakfastCereal.html">Breakfast and Cereal</a></li>
+                        <li><a href="Baking.html">Baking</a></li>
+                        <li><a href="Snacks.html">Snacks</a></li>
+                        <li><a href="Candy.html">Candy</a></li>
+                        <li><a href="Specialty.html">Specialty Shops</a></li>
+                        <li><a href="Deals.html">Deals</a></li>
+                        <li><a href="My-account.html">My-Account</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <!-- Add links for other pages here -->
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <div class="row">
+            <div class="side">
+               <!--- Testimonials-->
+                <div class="div3 eachdiv">
+                    <p> Testimonial </p>
+                    <div class="userdetails">
+                      <div class="imgbox">
+                        <img src="Darsh.png" alt="">
+                      </div>
+                      <div class="detbox">
+                        <p class="name dark">Darsh Vaghasia</p>
+                        <p class="designation dark">Verified Customer</p>
+                      </div>
+                    </div>
+                    <div class="review dark">
+                      <h4>Such a life-changing experience. Highly recommended!</h4>
+                      <p>One stop shop for all Indian groceries. Clean store, excellent service! Always fresh produce!</p>
+                    </div>
+                  </div>
+                  <!---END-->
+            </div>
+            <div class="right-side">
+                <!-- Content for Fresh Products -->
+                <em class="div4"><h2 style="color: seagreen;"> Specialty </h2></em>
+                <div class="div4 eachdiv">
+                    <p>
+                      Explore a world of culinary luxury with our selection of specialty foods at UTD Mart. From exquisite truffle oils that add an earthy elegance to your dishes to the finest aged balsamic vinegar that imparts a rich and complex flavor to your salads, our specialty foods section is a haven for food enthusiasts. Discover the art of gourmet cheese with our assortment of artisanal cheeses, carefully crafted by skilled cheesemakers from around the world. These cheeses showcase unique textures and flavors, perfect for creating impressive cheese boards or elevating your recipes.
+                      <br/>
+                      <br/>
+                  Elevate your cooking with our premium oils and condiments. Our extra virgin olive oil, sourced from the finest Mediterranean groves, lends a robust and fruity taste to your culinary creations. Pair it with our aged balsamic glaze for a harmonious blend of sweet and tangy notes that elevate your salads and marinades. Delve into the world of exotic spices with our saffron threads, a prized ingredient that imparts a subtle floral aroma and vibrant color to your dishes, making them truly extraordinary.
+                  <br/>
+                  <br/>
+                  For those seeking the finest in protein, we offer wild-caught salmon and grass-fed beef. Our commitment to sustainability ensures that you're getting high-quality, responsibly sourced options that are both healthy and delicious. As a finishing touch, indulge in the sweet sophistication of French macarons or the decadence of foie gras, both delicacies that cater to refined palates. Our selection of specialty foods represents the pinnacle of culinary excellence, allowing you to transform ordinary meals into extraordinary dining experiences. Visit UTD Mart and elevate your culinary journey today. </p>
+                  
+                    <button id="startSpecialOffer">Start Special Offer Questionnaire</button>
+
+                    <div id="specialOfferContainer" style="display: none;">
+                        <div id="questionContainer">
+                            <p id="questionText"></p>
+                            <label>
+                                <input type="radio" name="currentQuestion" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="radio" name="currentQuestion" value="no"> No
+                            </label>
+                            <button id="nextQuestion">Next</button>
+                            <button id="skipQuestion">Skip</button>
+                        </div>
+                        <div id="resultContainer" style="display: none;">
+                            <p id="qualificationText"></p>
+                            <p id="offerText"></p>
+                            <p id="timeSpentText"></p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <footer>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>&copy; 2023 Grocery Store. All rights reserved.</p>
+            <p>Darsh Maheshkumar Vaghasia ( DXV210035 ) - CS6314-001</p>
+            <span id="datetime"></span>
+            <br>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+        </footer>
+        <script>
+            var currentDateTime = new Date();
+
+// Format the date and time as a string
+var dateTimeString = currentDateTime.toLocaleString(); // You can use other methods to format it differently
+
+// Display the date and time in an HTML element
+document.getElementById("datetime").textContent = "Current Date and Time: " + dateTimeString;
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById("startSpecialOffer");
+    const specialOfferContainer = document.getElementById("specialOfferContainer");
+    const questionContainer = document.getElementById("questionContainer");
+    const resultContainer = document.getElementById("resultContainer");
+    const questionText = document.getElementById("questionText");
+    const qualificationText = document.getElementById("qualificationText");
+    const offerText = document.getElementById("offerText");
+    const timeSpentText = document.getElementById("timeSpentText");
+    const nextQuestionButton = document.getElementById("nextQuestion");
+    const skipQuestionButton = document.getElementById("skipQuestion");
+
+    const questions = [
+        {
+            text: "Are you a student?",
+            qualification: "student",
+            answer: "",
+        },
+        {
+            text: "Are you a low-income person?",
+            qualification: "low_income",
+            answer: "",
+        },
+        {
+            text: "Are you a regular customer?",
+            qualification: "regular_customer",
+            answer: "",
+        },
+    ];
+
+    let currentQuestion = 0;
+    let qualification = {};
+    let timeStart;
+
+    startButton.addEventListener("click", function () {
+        startButton.style.display = "none";
+        specialOfferContainer.style.display = "block";
+        timeStart = new Date().getTime();
+        showQuestion(currentQuestion);
+    });
+
+    nextQuestionButton.addEventListener("click", function () {
+        const answer = document.querySelector('input[name="currentQuestion"]:checked');
+        if (!answer) {
+            alert("Please select an answer.");
+            return;
+        }
+        questions[currentQuestion].answer = answer.value;
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            showQuestion(currentQuestion);
+        } else {
+            calculateOffer();
+        }
+    });
+
+    skipQuestionButton.addEventListener("click", function () {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            showQuestion(currentQuestion);
+        } else {
+            calculateOffer();
+        }
+    });
+
+    function showQuestion(questionNumber) {
+        resetAlert();
+        questionText.innerText = `Question ${questionNumber + 1}: ${questions[questionNumber].text}`;
+    }
+
+    function resetAlert() {
+        const alertMessage = document.querySelector(".alert");
+        if (alertMessage) {
+            alertMessage.remove();
+        }
+    }
+
+    function calculateOffer() {
+        resetAlert();
+        const timeEnd = new Date().getTime();
+        const timeSpent = (timeEnd - timeStart) / 1000;
+        timeSpentText.innerText = `Time spent: ${timeSpent} seconds`;
+
+        let offerTextContent = "Woohoooo!!!!, Based on your answers, you qualify for $100 off your Purchase:\n";
+        let qualificationCount = 0;
+
+        if (questions[0].answer === "yes") {
+            offerTextContent += "- You are a student.\n";
+            qualificationCount++;
+        }
+        if (questions[1].answer === "yes") {
+            offerTextContent += "- You are a low-income person.\n";
+            qualificationCount++;
+        }
+        if (questions[2].answer === "yes") {
+            offerTextContent += "- You are a regular customer.\n";
+            qualificationCount++;
+        }
+
+        if (qualificationCount === 0) {
+            offerTextContent = "Sorry, you do not qualify for a special offer at this time.";
+        }
+
+        qualificationText.innerText = "Special Offer Qualification:";
+        offerText.innerText = offerTextContent;
+
+        questionContainer.style.display = "none";
+        resultContainer.style.display = "block";
+    }
+});
+        //     // Define your questions and corresponding offers
+        //     const questions = [
+        //         { question: "Are you a student?", offer: "Because you're a student, you qualify for 10% off your purchase!" },
+        //         { question: "Are you a low-income person?", offer: "Because you're a low-income person, you qualify for $100 off your purchase!" },
+        //         // Add more questions and offers here
+        //     ];
+    
+        //     let currentQuestionIndex = 0;
+        //     const startTime = new Date().getTime();
+            
+        //     const questionContainer = document.getElementById("question-container");
+        //     const questionElement = document.getElementById("question");
+        //     const yesButton = document.getElementById("yes");
+        //     const noButton = document.getElementById("no");
+        //     const nextButton = document.getElementById("next");
+        //     const skipButton = document.getElementById("skip");
+        //     const resultContainer = document.getElementById("result");
+        //     const qualificationElement = document.getElementById("qualification");
+        //     const offerElement = document.getElementById("offer");
+        //     const timeSpentElement = document.getElementById("time-spent");
+    
+        //     function nextQuestion() {
+        //         const userAnswer = document.querySelector('input[name="answer"]:checked').value;
+    
+        //         if (currentQuestionIndex < questions.length) {
+        //             currentQuestionIndex++;
+        //             if (currentQuestionIndex < questions.length) {
+        //                 displayQuestion(currentQuestionIndex);
+        //             } else {
+        //                 showResult();
+        //             }
+        //         }
+        //     }
+    
+        //     function skipQuestion() {
+        //         if (currentQuestionIndex < questions.length) {
+        //             currentQuestionIndex++;
+        //             if (currentQuestionIndex < questions.length) {
+        //                 displayQuestion(currentQuestionIndex);
+        //             } else {
+        //                 showResult();
+        //             }
+        //         }
+        //     }
+    
+        //     function displayQuestion(index) {
+        //         questionElement.innerText = questions[index].question;
+        //         resultContainer.style.display = "none";
+        //     }
+    
+        //     function showResult() {
+        //         const totalTime = (new Date().getTime() - startTime) / 1000;
+        //         const userQualifications = [];
+        //         let totalOffer = 0;
+    
+        //         questions.forEach((question, index) => {
+        //             if (index < currentQuestionIndex && document.querySelector(`input[name="answer"][value="yes"]:checked`)) {
+        //                 userQualifications.push(question.offer);
+        //                 // Add logic here to calculate total offer amount based on the user's answers
+        //                 totalOffer = 100 + 0.10*totalOffer;
+        //             }
+        //         });
+    
+        //         qualificationElement.innerText = "Qualifications: " + userQualifications.join(", ");
+        //         offerElement.innerText = "Total Offer: $" + totalOffer;
+        //         timeSpentElement.innerText = "Time Spent: " + totalTime + " seconds";
+        //         resultContainer.style.display = "block";
+        //         questionContainer.style.display = "none";
+        //     }
+    
+        //     displayQuestion(currentQuestionIndex);
+        // </script>
+        
+        <!-- // <script>
+        //     // create a function to update the date and time
+        //     function updateDateTime() {
+        //       // create a new `Date` object
+        //       const now = new Date();
+      
+        //       // get the current date and time as a string
+        //       const currentDateTime = now.toLocaleString();
+      
+        //       // update the `textContent` property of the `span` element with the `id` of `datetime`
+        //       document.querySelector('#datetime').textContent = currentDateTime;
+        //     }
+      
+        //     // call the `updateDateTime` function every second
+        //     setInterval(updateDateTime, 1000);
+          </script> -->
+    </body>
+</html>

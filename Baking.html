@@ -1,0 +1,103 @@
+<html>
+    <head>
+    <title>Baking</title>
+    <link rel="stylesheet" href="astyle baking.css">
+    </head>
+    <body>
+        <div class = "container">
+        <header>
+            <section class='overlay'>
+                <br>
+                <div class="shopping">
+                    <img src="shopping-basket-svgrepo-com.svg">
+                    <span class="quantity">0</span>
+                </div>
+                <br><br><br>
+                <div class = 'GM'>
+                    <h1>GREEN MART</h1>
+                    <h2>Baking</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="Fresh Products.html">Fresh Products</a></li>
+                        <li><a href="Frozen.html">Frozen</a></li>
+                        <li><a href="pantry.html">Pantry</a></li>
+                        <li><a href="BreakfastCereal.html">Breakfast and Cereal</a></li>
+                        <li><a href="Baking.html">Baking</a></li>
+                        <li><a href="Snacks.html">Snacks</a></li>
+                        <li><a href="Candy.html">Candy</a></li>
+                        <li><a href="Specialty.html">Specialty Shops</a></li>
+                        <li><a href="Deals.html">Deals</a></li>
+                        <li><a href="My-account.html">My-Account</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <!-- Add links for other pages here -->
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <div class="row">
+            <div class="side">
+               <!--- Testimonials-->
+               <div class="div3 eachdiv">
+                <div class="userdetails">
+                  <div class="imgbox">
+                    <img src="Darsh.png" alt="">
+                  </div>
+                  <div class="detbox">
+                    <p class="name dark">Darsh Vaghasia</p>
+                    <p class="designation dark">Verified Customer</p>
+                  </div>
+                  <div id="search-container">
+                    <input
+                      type="search"
+                      id="search-input"
+                      placeholder="Search product name here.."
+                    />
+                    <button id="search" onclick="find(document.getElementById('search-input').value)">Search</button>
+                  </div>
+                  <div class="detbox">
+                    <br>
+                    <p class="name dark">Categories</p>
+                  </div>
+                </div>
+                <div id="btns" class="buttons">
+
+                </div>
+              </div>
+                  <!---END-->
+            </div>
+            <div class="right-side">
+                <!-- Content for Fresh Products -->
+                <em class="div4"><h2 style="color: seagreen;"> Baking </h2></em>
+                <div class="div4 eachdiv">
+                    <div class="list" id ="list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+           
+        <footer>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+            <br>
+            <p>&copy; 2023 Grocery Store. All rights reserved.</p>
+            <p>Darsh Maheshkumar Vaghasia ( DXV210035 ) - CS6314-001</p>
+            <span id="datetime"></span>
+            <br>
+            <p style="opacity: 0.4; text-align: center;">----------------------------------------------------------------------------------------------------------------------------------------</p>
+        </footer>
+        <script src="baking.js"></script>
+        <script src="cartcard.js"></script>
+        <script src="Date.js"></script>
+    </body>
+</html>
